@@ -18,6 +18,10 @@ app.get('/api/hi', (request, response) => {
     // 클라이언트에게 문자열 '안녕 익스프레스!'를 응답
     response.send(`안녕 익스프레스! ${process.env.APP_NAME}`);
 });
+app.get('/api/test', (request, response) => {
+    // 클라이언트에게 문자열 '안녕 익스프레스!'를 응답
+    response.send(`test ${process.env.APP_NAME}`);
+});
 
 app.all(/^\/api\/.*/, (request, response) => {
     response.send('404 Not Found');
